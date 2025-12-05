@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIO - All In One</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Ministry_of_Commerce_and_Industry.svg/1200px-Ministry_of_Commerce_and_Industry.svg.png"
+                alt="Ministry of Commerce and Industry">
+            <img src="../images/logoo.png" alt="Logo" onerror="this.style.display='none'">
+            <div class="yrs">
+                <img src="https://ramanujancollege.ac.in/media/images/G20_India_2023_logo.original.png"
+                    alt="G20 India 2023">
+                <img src="https://ramanujancollege.ac.in/media/images/Azadi_Ka_Amrit_Mahotsav_English_logo.original.png"
+                    alt="Azadi Ka Amrit Mahotsav">
+            </div>
+        </div>
+        <nav>
+            <a href="../home/index.html">Home</a>
+            <a href="../dataset/index.html">Dataset</a>
+            <a href="../visualization/index.html">Visualization</a>
+            <a href="../F & Q/index.html">FAQs</a>
+            <a href="../contact/index.html">Contact Us</a>
+            <a href="../help/index.html">Help & Support</a>
+            <a href="../form/index.html" style="background-color: #007bff;">Login</a>
+        </nav>
+    </header>
+
+    <div class="slider">
+        <video id="background-video" autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
+            <source src="https://assets.codepen.io/6093409/river.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h1>Hello! We are here</h1>
+        <h2>All In One</h2>
+    </div>
+
+    <section id="statistics" class="statistics">
+        <h2>Our Impact</h2>
+        <div class="statistics-counter">
+            <div class="single-ststistics-box">
+                <div class="statistics-content">
+                    <span class="counter" data-target="28">0</span><span class="suffix">+</span>
+                </div>
+                <h3>STATES</h3>
+            </div>
+            <div class="single-ststistics-box">
+                <div class="statistics-content">
+                    <span class="counter" data-target="101">0</span><span class="suffix">+</span>
+                </div>
+                <h3>MINISTRY</h3>
+            </div>
+            <div class="single-ststistics-box">
+                <div class="statistics-content">
+                    <span class="counter" data-target="1000">0</span><span class="suffix">+</span>
+                </div>
+                <h3>DATA IMPLEMENT</h3>
+            </div>
+            <div class="single-ststistics-box">
+                <div class="statistics-content">
+                    <span class="counter" data-target="750">0</span><span class="suffix">+</span>
+                </div>
+                <h3>SUCCESS RESULT</h3>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="foot">
+            <div class="foot-panel1">
+                <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Back to Top</a>
+            </div>
+            <div class="containe">
+                <div class="footer-content1">
+                    <h3>Contact Us</h3>
+                    <p>Email: ar9678234@gmail.com</p>
+                    <p>Phone: 9262872022</p>
+                    <p>Address: DRL railway chhoti colony chunna bhatta</p>
+                </div>
+                <div class="footer-content2">
+                    <h3>Quick Links</h3>
+                    <ul class="list">
+                        <li><a href="../home/index.html">Home</a></li>
+                        <li><a href="../dataset/index.html">Dataset</a></li>
+                        <li><a href="../visualization/index.html">Visualization</a></li>
+                        <li><a href="../F & Q/index.html">FAQs</a></li>
+                        <li><a href="../contact/index.html">Contact Us</a></li>
+                        <li><a href="../helpindex.html">Help</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-content3">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li><a href="https://www.facebook.com/aman.kumar.971048"><i class="fa-brands fa-facebook" title="facebook"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-twitter" title="twitter"></i></a></li>
+                        <li><a href="https://www.instagram.com/hakunamatata_aman/"><i class="fa-brands fa-instagram" title="instagram"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/aman-kumar-2703rc?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin" title="linkedin"></i></a></li>
+                        <li><a href="https://github.com/aman-20232703"><i class="fa-brands fa-github" title="github"></i></a></li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="botton-bar">
+            <p>&copy; 2024 Your Company. All rights reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200;
+
+        function animateCounters() {
+            counters.forEach(counter => {
+                counter.innerText = '0';
+                const target = +counter.getAttribute('data-target');
+                const increment = target / speed;
+
+                const updateCounter = () => {
+                    const count = +counter.innerText;
+
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + increment);
+                        setTimeout(updateCounter, 20);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+
+                updateCounter();
+            });
+        }
+
+        animateCounters();
+        setInterval(animateCounters, 10000);
+    </script>
+</body>
+
+</html>
